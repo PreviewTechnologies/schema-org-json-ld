@@ -6,11 +6,14 @@ namespace Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary;
  * Class BaseSalaryValue
  * @package Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary
  */
+
+use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+
 /**
  * Class BaseSalaryValue
  * @package Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary
  */
-class BaseSalaryValue
+class BaseSalaryValue implements SchemaInterface
 {
     /**
      * @var string
@@ -47,6 +50,7 @@ class BaseSalaryValue
 
     /**
      * @param $type
+     *
      * @return BaseSalaryValue
      */
     public function setType($type)
@@ -66,6 +70,7 @@ class BaseSalaryValue
 
     /**
      * @param $maxValue
+     *
      * @return BaseSalaryValue
      */
     public function setMaxValue($maxValue)
@@ -84,6 +89,7 @@ class BaseSalaryValue
 
     /**
      * @param $minValue
+     *
      * @return BaseSalaryValue
      */
     public function setMinValue($minValue)
@@ -102,6 +108,7 @@ class BaseSalaryValue
 
     /**
      * @param $unitText
+     *
      * @return BaseSalaryValue
      */
     public function setUnitText($unitText)
@@ -120,11 +127,20 @@ class BaseSalaryValue
 
     /**
      * @param $value
+     *
      * @return BaseSalaryValue
      */
     public function setValue($value)
     {
         $this->value = $value;
         return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return get_object_vars($this);
     }
 }

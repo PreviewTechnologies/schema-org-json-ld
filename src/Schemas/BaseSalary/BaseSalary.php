@@ -2,11 +2,13 @@
 
 namespace Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary;
 
+use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+
 /**
  * Class BaseSalary
  * @package Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary
  */
-class BaseSalary
+class BaseSalary implements SchemaInterface
 {
     /**
      * @var string|null
@@ -41,6 +43,7 @@ class BaseSalary
 
     /**
      * @param $type
+     *
      * @return BaseSalary
      */
     public function setType($type)
@@ -59,6 +62,7 @@ class BaseSalary
 
     /**
      * @param $currency
+     *
      * @return BaseSalary
      */
     public function setCurrency($currency)
@@ -81,5 +85,13 @@ class BaseSalary
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return get_object_vars($this);
     }
 }
