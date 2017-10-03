@@ -1,0 +1,19 @@
+{
+    "name": "previewtechs/schema-org-json-ld",
+    "description": "Schema.org JSON-LD format",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shaharia Azam",
+            "email": "shaharia@previewtechs.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Previewtechs\\SchemaOrg\\JsonLd\\": "src/"
+        }
+    }
+}
