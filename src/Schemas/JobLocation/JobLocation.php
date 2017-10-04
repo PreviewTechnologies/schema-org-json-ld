@@ -11,8 +11,9 @@ namespace Previewtechs\SchemaOrg\JsonLd\Schemas\JobLocation;
 
 use Previewtechs\SchemaOrg\JsonLd\Schemas\Address\Address;
 use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+use Previewtechs\SchemaOrg\JsonLd\Schemas\Schemas;
 
-class JobLocation implements SchemaInterface
+class JobLocation extends Schemas implements SchemaInterface
 {
     /**
      * @var string|null
@@ -46,10 +47,5 @@ class JobLocation implements SchemaInterface
     public function getType()
     {
         return $this->type;
-    }
-
-    public function toArray()
-    {
-
     }
 }

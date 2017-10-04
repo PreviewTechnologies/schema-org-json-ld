@@ -10,8 +10,9 @@ namespace Previewtechs\SchemaOrg\JsonLd\Schemas\Address;
 
 
 use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+use Previewtechs\SchemaOrg\JsonLd\Schemas\Schemas;
 
-class Address implements SchemaInterface
+class Address extends Schemas implements SchemaInterface
 {
     /**
      * @var string
@@ -155,13 +156,5 @@ class Address implements SchemaInterface
     {
         $this->addressCountry = $addressCountry;
         return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return get_object_vars($this);
     }
 }

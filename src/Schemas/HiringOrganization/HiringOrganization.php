@@ -3,12 +3,13 @@
 namespace Previewtechs\SchemaOrg\JsonLd\Schemas\HiringOrganization;
 
 use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+use Previewtechs\SchemaOrg\JsonLd\Schemas\Schemas;
 
 /**
  * Class HiringOrganization
  * @package Previewtechs\SchemaOrg\JsonLd\Schemas\HiringOrganization
  */
-class HiringOrganization implements SchemaInterface
+class HiringOrganization extends Schemas implements SchemaInterface
 {
     /**
      * @var string
@@ -71,13 +72,5 @@ class HiringOrganization implements SchemaInterface
     public function setSameAs($sameAs)
     {
         $this->sameAs = $sameAs;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return get_object_vars($this);
     }
 }

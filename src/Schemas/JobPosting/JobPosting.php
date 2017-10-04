@@ -6,12 +6,13 @@ use Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary\BaseSalary;
 use Previewtechs\SchemaOrg\JsonLd\Schemas\HiringOrganization\HiringOrganization;
 use Previewtechs\SchemaOrg\JsonLd\Schemas\JobLocation\JobLocation;
 use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+use Previewtechs\SchemaOrg\JsonLd\Schemas\Schemas;
 
 /**
  * Class JobPosting
  * @package Previewtechs\SchemaOrg\JsonLd\Schemas\JobPosting
  */
-class JobPosting implements SchemaInterface
+class JobPosting extends Schemas implements SchemaInterface
 {
     /**
      * @var string|null
@@ -178,27 +179,5 @@ class JobPosting implements SchemaInterface
     public function setBaseSalary()
     {
         return $this->baseSalary;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return get_object_vars($this);
-    }
-
-    public function getJsonLd()
-    {
-        $data = [];
-
-        $arrays = get_object_vars($this);
-        foreach ($arrays as $key => $value) {
-            if (is_object($value)) {
-                $data[$key] = $value->toArray();
-            }
-        }
-
-        return $data;
     }
 }

@@ -3,12 +3,13 @@
 namespace Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary;
 
 use Previewtechs\SchemaOrg\JsonLd\Schemas\SchemaInterface;
+use Previewtechs\SchemaOrg\JsonLd\Schemas\Schemas;
 
 /**
  * Class BaseSalary
  * @package Previewtechs\SchemaOrg\JsonLd\Schemas\BaseSalary
  */
-class BaseSalary implements SchemaInterface
+class BaseSalary extends Schemas implements SchemaInterface
 {
     /**
      * @var string|null
@@ -85,13 +86,5 @@ class BaseSalary implements SchemaInterface
     public function getValue()
     {
         return $this->value;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return get_object_vars($this);
     }
 }

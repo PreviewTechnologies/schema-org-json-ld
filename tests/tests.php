@@ -7,6 +7,7 @@ $jobPosting->setBaseSalary()->setValue()
     ->setMinValue(2)
     ->setMaxValue(400)
     ->setUnitText('Month');
+$jobPosting->setJobBenefits("Medical, Insurance");
 
-var_dump($jobPosting->getBaseSalary());
+var_dump($jobPosting->getJsonLd());
 die();
